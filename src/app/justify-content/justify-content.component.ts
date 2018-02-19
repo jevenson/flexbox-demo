@@ -3,10 +3,10 @@ import { FlexContainerComponent } from './../shared/flex-container/flex-containe
 
 @Component({
   moduleId: module.id,
-  selector: 'display-flex',
-  templateUrl: 'flex-direction.component.html'
+  selector: 'justify-content',
+  templateUrl: 'justify-content.component.html'
 })
-export class FlexDirectionComponent {
+export class JustifyContentComponent {
 
   @ViewChild(FlexContainerComponent) public flexContainer: FlexContainerComponent;
 

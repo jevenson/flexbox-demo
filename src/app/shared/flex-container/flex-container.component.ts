@@ -19,7 +19,7 @@ export class FlexContainerComponent implements OnInit {
     this.numbers = Array(this.childCount).fill(0).map((v, i) => ++i);
   }
 
-  public applyStyle(style: any): void {
-    this.selectedStyle = style;
+  public applyStyle(propertyName: string, propertyValue: string): void {
+    this.selectedStyle = { [propertyName]: propertyValue };
   }
 }

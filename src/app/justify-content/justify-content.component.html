@@ -1,0 +1,9 @@
+<h1>justify-content</h1>
+<prop-button-container propertyName="justify-content" (propertyValueChange)="onPropertyValuechange($event)">
+  <prop-button propertyValue="flex-start"></prop-button>
+  <prop-button propertyValue="flex-end"></prop-button>
+  <prop-button propertyValue="center"></prop-button>
+  <prop-button propertyValue="space-between"></prop-button>
+  <prop-button propertyValue="space-around"></prop-button>
+</prop-button-container>
+<flex-container [childCount]="4"></flex-container>
