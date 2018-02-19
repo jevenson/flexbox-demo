@@ -10,6 +10,7 @@ export class FlexContainerComponent implements OnInit {
 
   @Input() public childCount: number = 5;
   @Input() public enableFlex: boolean = true;
+  @Input() public mismatch: boolean = false;
 
   public numbers: number[];
 

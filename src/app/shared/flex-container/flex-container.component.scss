@@ -20,4 +20,11 @@
     &:nth-child(5) { background-color: slateblue; }
     &:nth-child(6) { background-color: orangered; }
   }
+
+  &.mismatch .child {
+    &:nth-child(1) { height: 80%; }
+    &:nth-child(2) { height: 30%; font-size: 40px; }
+    &:nth-child(3) { height: 60%; }
+    &:nth-child(4) { height: 40%; font-size: 100px;}
+  }
 }
