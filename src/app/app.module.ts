@@ -1,20 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { SharedModule } from './shared/shared.module';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routedComponents } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
+import { KeyboardEventService } from './services/keyboard-event.service';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
-    AppRoutingModule
+    SharedModule
   ],
-  providers: [],
+  declarations: [
+    AppComponent,
+    routedComponents
+  ],
+  providers: [
+    KeyboardEventService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

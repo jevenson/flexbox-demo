@@ -1,0 +1,8 @@
+<h1>flex-direction</h1>
+<prop-button-container propertyName="flex-direction" (propertyValueChange)="onPropertyValuechange($event)">
+  <prop-button propertyValue="row"></prop-button>
+  <prop-button propertyValue="row-reverse"></prop-button>
+  <prop-button propertyValue="column"></prop-button>
+  <prop-button propertyValue="column-reverse"></prop-button>
+</prop-button-container>
+<flex-container [childCount]="4"></flex-container>

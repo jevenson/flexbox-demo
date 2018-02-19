@@ -1,0 +1,23 @@
+.container {
+
+  &.flex-container { display: flex; }
+
+  &.flexstart { justify-content: flex-start; }
+  &.flexend { justify-content: flex-end; }
+  &.center { justify-content: center; }
+  &.space-around { justify-content: space-around; }
+  &.space-between { justify-content: space-between; }
+
+  .child {
+    padding: 2% 5%;
+    text-align: center;
+    font-size: 75px;
+
+    &:nth-child(1) { background-color: royalblue; }
+    &:nth-child(2) { background-color: crimson; }
+    &:nth-child(3) { background-color: darkorange; }
+    &:nth-child(4) { background-color: olivedrab; }
+    &:nth-child(5) { background-color: slateblue; }
+    &:nth-child(6) { background-color: orangered; }
+  }
+}

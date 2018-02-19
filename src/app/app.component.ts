@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { KeyboardEventService } from './services/keyboard-event.service';
 
 @Component({
   selector: 'app-root',
@@ -7,24 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  public emittedCode: number;
+  constructor(private keyboardEventService: KeyboardEventService) { }
 
   public ngOnInit(): void {
-    document.addEventListener('keydown', (event: KeyboardEvent) => this.onKeydown(event));
-  }
-
-  private onKeydown(event: KeyboardEvent): void {
-    this.emitEvent(event);
-    this.updateKey(event);
-  }
-
-  private emitEvent(event: KeyboardEvent): void {
-    if (window.parent) {
-      window.parent.postMessage({ eventType: 'keydown', keyCode: event.keyCode }, '*');
-    }
-  }
-
-  private updateKey(event: KeyboardEvent): void {
-    this.emittedCode = event.keyCode;
+    this.keyboardEventService.initialize();
   }
 }

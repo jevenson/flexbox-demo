@@ -1,5 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
 body {
-    background-color: white;
+    background-color:#222;
+}
+
+h1 {
+    color: lightgray;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: 5%;
+    padding: 5%;
+    background-color: lightgray;
 }

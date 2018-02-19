@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 1;
+  flex-basis: 20%;
+
+  button {
+    padding: 5% 10%;
+    font-family: Courier New, Courier, monospace;
+    font-weight: bold;
+    font-size: 20px;
+    border: 2px solid black;
+    width: 100%;
+
+    &:hover {
+      color: brown;
+      border: 2px solid brown;
+    }
+
+    &:focus { outline: none; }
+  }
+}
