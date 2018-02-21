@@ -6,13 +6,15 @@ import { FlexDirectionComponent } from './flex-direction/flex-direction.componen
 import { JustifyContentComponent } from './justify-content/justify-content.component';
 import { AlignItemsComponent } from './align-items/align-items.component';
 import { AlignSelfComponent } from './align-self/align-self.component';
+import { FlexWrapComponent } from './flex-wrap/flex-wrap.component';
 
 const routes: Routes = [
   { path: 'display-flex', component: DisplayFlexComponent },
   { path: 'flex-direction', component: FlexDirectionComponent },
   { path: 'justify-content', component: JustifyContentComponent },
   { path: 'align-items', component: AlignItemsComponent },
-  { path: 'align-self', component: AlignSelfComponent }
+  { path: 'align-self', component: AlignSelfComponent },
+  { path: 'flex-wrap', component: FlexWrapComponent }
 ];
 
 @NgModule({
@@ -26,5 +28,6 @@ export const routedComponents = [
   FlexDirectionComponent,
   JustifyContentComponent,
   AlignItemsComponent,
-  AlignSelfComponent
+  AlignSelfComponent,
+  FlexWrapComponent
 ];

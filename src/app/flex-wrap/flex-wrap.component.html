@@ -1,0 +1,7 @@
+<h1>flex-wrap</h1>
+<prop-button-container propertyName="flex-wrap" (propertyValueChange)="onPropertyValuechange($event)">
+  <prop-button propertyValue="nowrap"></prop-button>
+  <prop-button propertyValue="wrap"></prop-button>
+  <prop-button propertyValue="wrap-reverse"></prop-button>
+</prop-button-container>
+<flex-container [childCount]="10"></flex-container>
