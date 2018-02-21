@@ -2,6 +2,28 @@
 <prop-button-container propertyName="flex-grow" (propertyValueChange)="onPropertyValuechange($event)">
   <prop-button propertyValue="0" description="all"></prop-button>
   <prop-button propertyValue="1" description="all"></prop-button>
-  <prop-button propertyValue="4" description="child 2"></prop-button>
+  <prop-button propertyValue="5" description="child 2"></prop-button>
 </prop-button-container>
-<flex-container [childCount]="4"></flex-container>
+<flex-container [childCount]="elementCount"></flex-container>
+<div class="container math-container">
+  <div class="child">
+    <strong>Child 1</strong><br/>
+    Flex Grow: {{ allFlexGrowValue }} <br/>
+    Width: {{ allWidth | percent:'2.2' }}
+  </div>
+  <div class="child">
+    <strong>Child 2</strong><br/>
+    Flex Grow: {{ individualFlexGrowValue }} <br/>
+    Width: {{ individualWidth | percent:'2.2' }}
+  </div>
+  <div class="child">
+    <strong>Child 3</strong><br/>
+    Flex Grow: {{ allFlexGrowValue }} <br/>
+    Width: {{ allWidth | percent:'2.2' }}
+  </div>
+  <div class="child">
+    <strong>Child 4</strong><br/>
+    Flex Grow: {{ allFlexGrowValue }} <br/>
+    Width: {{ allWidth | percent:'2.2' }}
+  </div>
+</div>
