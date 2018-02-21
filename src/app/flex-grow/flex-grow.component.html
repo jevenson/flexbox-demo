@@ -1,0 +1,7 @@
+<h1>flex-grow</h1>
+<prop-button-container propertyName="flex-grow" (propertyValueChange)="onPropertyValuechange($event)">
+  <prop-button propertyValue="0" description="all"></prop-button>
+  <prop-button propertyValue="1" description="all"></prop-button>
+  <prop-button propertyValue="4" description="child 2"></prop-button>
+</prop-button-container>
+<flex-container [childCount]="4"></flex-container>

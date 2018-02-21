@@ -8,6 +8,7 @@ import { AlignItemsComponent } from './align-items/align-items.component';
 import { AlignSelfComponent } from './align-self/align-self.component';
 import { FlexWrapComponent } from './flex-wrap/flex-wrap.component';
 import { AlignContentComponent } from './align-content/align-content.component';
+import { FlexGrowComponent } from './flex-grow/flex-grow.component';
 
 const routes: Routes = [
   { path: 'display-flex', component: DisplayFlexComponent },
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'align-items', component: AlignItemsComponent },
   { path: 'align-self', component: AlignSelfComponent },
   { path: 'flex-wrap', component: FlexWrapComponent },
-  { path: 'align-content', component: AlignContentComponent }
+  { path: 'align-content', component: AlignContentComponent },
+  { path: 'flex-grow', component: FlexGrowComponent }
 ];
 
 @NgModule({
@@ -32,5 +34,6 @@ export const routedComponents = [
   AlignItemsComponent,
   AlignSelfComponent,
   FlexWrapComponent,
-  AlignContentComponent
+  AlignContentComponent,
+  FlexGrowComponent
 ];

@@ -23,10 +23,13 @@ export class FlexContainerComponent implements OnInit {
     this.numbers = Array(this.childCount).fill(0).map((v, i) => ++i);
   }
 
-  public applyStyle(propertyName: string, propertyValue: string, childStyle: boolean = false): void {
+  public applyStyle(propertyName: string, propertyValue: string, childStyle: boolean = false, childSelector?: string): void {
     if (childStyle) {
-      const element = this.elRef.nativeElement.querySelector('.child:nth-child(2)');
-      element.style[propertyName] = propertyValue;
+      const elementArray = this.elRef.nativeElement.querySelectorAll(childSelector || '.child:nth-child(2)');
+
+      elementArray.forEach(element => {
+        element.style[propertyName] = propertyValue;
+      });
     }
     else {
       this.selectedStyle = { [propertyName]: propertyValue };
