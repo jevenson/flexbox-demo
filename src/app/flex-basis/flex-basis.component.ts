@@ -12,10 +12,25 @@ import { FlexContainerComponent } from './../shared/flex-container/flex-containe
       justify-content: space-between;
     }
 
-    // ::ng-deep .child {
-    //   flex-grow: 1;
-    //   flex-shrink: 0;
-    // }
+    .sub-prop-container {
+      display: flex;
+      justify-content: space-between;
+      width: 86vw;
+      margin: 10px 5vw;
+    }
+
+    prop-button-container h2 {
+      color: black;
+    }
+
+    prop-button-container {
+      width: 47%;
+    }
+
+    ::ng-deep .sub-prop-container .button-container {
+      width: 100%;
+      margin: 0;
+    }
   `]
 })
 export class FlexBasisComponent {

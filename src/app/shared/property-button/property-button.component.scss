@@ -12,6 +12,10 @@
     border: 2px solid black;
     width: 100%;
 
+    &.active {
+      background-color: lightpink;
+    }
+
     &:hover {
       color: brown;
       border: 2px solid brown;

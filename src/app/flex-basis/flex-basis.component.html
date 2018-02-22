@@ -2,6 +2,19 @@
 <h2>drag to resize</h2>
 <prop-button-container propertyName="flex-basis" (propertyValueChange)="onPropertyValuechange($event)">
   <prop-button propertyValue="auto"></prop-button>
+  <h2>flex-basis</h2>
   <prop-button propertyValue="30vw"></prop-button>
 </prop-button-container>
+<div class="sub-prop-container">
+  <prop-button-container propertyName="flex-grow" (propertyValueChange)="onPropertyValuechange($event)">
+    <prop-button propertyValue="0"></prop-button>
+    <h2>flex-grow</h2>
+    <prop-button propertyValue="1"></prop-button>
+  </prop-button-container>
+  <prop-button-container propertyName="flex-shrink" (propertyValueChange)="onPropertyValuechange($event)">
+    <prop-button propertyValue="0"></prop-button>
+    <h2>flex-shrink</h2>
+    <prop-button propertyValue="1"></prop-button>
+  </prop-button-container>
+</div>
 <flex-container [childCount]="4"></flex-container>

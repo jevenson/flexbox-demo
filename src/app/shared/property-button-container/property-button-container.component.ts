@@ -23,7 +23,9 @@ export class PropertyButtonContainerComponent implements AfterContentInit {
     this.propButtons
       .forEach(c => c.click.subscribe(
         (value) => {
+          this.propButtons.forEach(btn => btn.isActive = false);
           this.propertyValueChange.emit({ propertyName: this.propertyName, propertyValue: value });
+          this.propButtons.find(btn => btn.propertyValue === value).isActive = true;
         }));
   }
 }
