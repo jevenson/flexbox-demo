@@ -8,63 +8,21 @@ import { FlexContainerComponent } from './../shared/flex-container/flex-containe
   styles: [`
     ::ng-deep .flex-container {
       justify-content: space-between;
+      resize: horizontal;
+      overflow: auto;
     }
 
-    ::ng-deep .child {
-      flex-grow: 1;
+    ::ng-deep .child:nth-child(1) {
+      flex: 1 0 30vw;
     }
 
-    .math-container {
-      display: flex;
-      font-size: 30px;
-      justify-content: space-around;
+    ::ng-deep .child:nth-child(2) {
+      flex: 0 2 30vw;
     }
 
-    .child {
-      border: 2px solid black;
-      padding: 2.5%;
+    ::ng-deep .child:nth-child(3) {
+      flex: 0 3 30vw;
     }
   `]
 })
-export class FlexShrinkComponent {
-
-  public readonly elementCount: number = 4;
-
-  public allFlexGrowValue: number = 0;
-  public individualFlexGrowValue: number = 0;
-
-  public get allWidth(): number {
-    return this.totalWidth === 0 ? 0 : this.allFlexGrowValue / this.totalWidth;
-  }
-
-  public get individualWidth(): number {
-    return this.totalWidth === 0 ? 0 : this.individualFlexGrowValue / this.totalWidth;
-  }
-
-  private totalWidth: number = 0;
-
-  @ViewChild(FlexContainerComponent) public flexContainer: FlexContainerComponent;
-
-  public onPropertyValuechange(event): void {
-    let childSelector: string | undefined = undefined;
-
-    let requestFlexValue: number = Number.parseInt(event.propertyValue);
-
-    if (requestFlexValue === 0 || requestFlexValue === 1) {
-      childSelector = '.child';
-
-      this.allFlexGrowValue = requestFlexValue;
-
-      this.totalWidth = this.allFlexGrowValue * this.elementCount;
-    }
-    else {
-      this.totalWidth = this.allFlexGrowValue * (this.elementCount - 1) + requestFlexValue;
-    }
-
-    this.individualFlexGrowValue = requestFlexValue;
-
-    console.log('total ' + this.totalWidth);
-
-    this.flexContainer.applyStyle(event.propertyName, event.propertyValue, true, childSelector);
-  }
-}
+export class FlexShrinkComponent { }

@@ -8,14 +8,22 @@ body {
     background-color:#222;
 }
 
-h1 {
+h1, h2, h3, h4 {
     color: lightgray;
     text-align: center;
 }
 
 .container {
-    width: 85%;
-    margin: 2.5% 5%;
-    padding: 2.5%;
+    width: 86vw;
+    max-width: 86vw;
+    margin: 10px 5vw;
+    padding: 2vw;
     background-color: lightgray;
+}
+
+pre {
+    color: lightgray;
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
 }
