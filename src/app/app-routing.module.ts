@@ -12,6 +12,7 @@ import { AlignContentComponent } from './align-content/align-content.component';
 import { FlexGrowComponent } from './flex-grow/flex-grow.component';
 import { FlexShrinkComponent } from './flex-shrink/flex-shrink.component';
 import { FlexBasisComponent } from './flex-basis/flex-basis.component';
+import { OrderComponent } from './order/order.component';
 
 const routes: Routes = [
   { path: '', component: IndexComponent },
@@ -24,7 +25,8 @@ const routes: Routes = [
   { path: 'align-content', component: AlignContentComponent },
   { path: 'flex-grow', component: FlexGrowComponent },
   { path: 'flex-shrink', component: FlexShrinkComponent },
-  { path: 'flex-basis', component: FlexBasisComponent }
+  { path: 'flex-basis', component: FlexBasisComponent },
+  { path: 'order', component: OrderComponent }
 ];
 
 @NgModule({
@@ -44,5 +46,6 @@ export const routedComponents = [
   AlignContentComponent,
   FlexGrowComponent,
   FlexShrinkComponent,
-  FlexBasisComponent
+  FlexBasisComponent,
+  OrderComponent
 ];
