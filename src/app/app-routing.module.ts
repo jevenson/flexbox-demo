@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { IndexComponent } from './index.component';
 import { DisplayFlexComponent } from './display-flex/display-flex.component';
 import { FlexDirectionComponent } from './flex-direction/flex-direction.component';
 import { JustifyContentComponent } from './justify-content/justify-content.component';
@@ -13,6 +14,7 @@ import { FlexShrinkComponent } from './flex-shrink/flex-shrink.component';
 import { FlexBasisComponent } from './flex-basis/flex-basis.component';
 
 const routes: Routes = [
+  { path: '', component: IndexComponent },
   { path: 'display-flex', component: DisplayFlexComponent },
   { path: 'flex-direction', component: FlexDirectionComponent },
   { path: 'justify-content', component: JustifyContentComponent },
@@ -32,6 +34,7 @@ const routes: Routes = [
 export class AppRoutingModule { }
 
 export const routedComponents = [
+  IndexComponent,
   DisplayFlexComponent,
   FlexDirectionComponent,
   JustifyContentComponent,
